@@ -1,0 +1,11 @@
+.Links {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.Links:hover {
+    color: rgb(126, 246, 255)
+ }
+
+ .MenuButtons {
+    font-size: 20;
+ }
