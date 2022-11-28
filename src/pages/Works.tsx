@@ -4,10 +4,9 @@ import './Works';
 import NavBar from "../components/NavBar";
 
 export default function Works() {
-
     return (
         <React.Fragment>
-            <NavBar></NavBar>
+            <NavBar/>
 
             {/* Content starts here */}
             <Box sx={{marginTop: 20}}>

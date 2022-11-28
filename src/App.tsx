@@ -20,6 +20,6 @@ export default function App() {
         </Routes>
       </BrowserRouter>
       </header>
-    </div>
+      </div>
   );
 }

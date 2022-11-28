@@ -2,7 +2,7 @@
     color: #FFFFFF;
     text-decoration: none;
 }
-  /* Specific styles for active links */
+
 .link-active {
     color: #FFFFFF;
     background: #1BB6F7;
@@ -15,10 +15,11 @@
     color: #FFFFFF;
     text-decoration: none;
 }
+
 .Links:hover {
     color: rgb(126, 246, 255)
- }
+}
 
- .MenuButtons {
+.MenuButtons {
     font-size: 18;
- }
+}
