@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Works from "./pages/Works";
 import Contact from "./pages/Contact";
-import ColorSequence from "./pages/ColorSequence";
+// import ColorSequence from "./pages/ColorSequence";
 
 export default function App() {
   return (
@@ -16,7 +16,7 @@ export default function App() {
           <Route path="/" element={<Home/>} /> {/* Default Path */}
           <Route path="/works" element={<Works/>} />
           <Route path="/contact" element={<Contact/>} />
-          <Route path="/colorsequence" element={<ColorSequence/>} />
+          {/* <Route path="/colorsequence" element={<ColorSequence/>} /> */}
         </Routes>
       </BrowserRouter>
       </header>
