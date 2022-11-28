@@ -52,7 +52,7 @@ export default function Works() {
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">MedSight</Typography>
                                 <Typography variant="body2" color="text.secondary" align="justify">
-                                    A Doctor-Patient appointment system using Python Django application deployed using Microsoft Azure and Postgres database
+                                    A Doctor-Patient appointment system using Python, Django, HTML, CSS, JS, Boostrap, and mySQL.
                                 </Typography>
                             </CardContent>
                             <CardActions>
@@ -70,7 +70,7 @@ export default function Works() {
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">Vorbestellan</Typography>
                                 <Typography variant="body2" color="text.secondary" align="justify">
-                                    A Conference Room reservation system Python Django application deployed using Microsoft Azure and Postgres database
+                                    A Conference Room reservation system using Python, Django, HTML, CSS, JS, Boostrap, and mySQL.
                                 </Typography>
                             </CardContent>
                             <CardActions>
