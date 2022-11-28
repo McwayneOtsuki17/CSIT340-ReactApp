@@ -47,7 +47,21 @@ export default function Works() {
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">Wildcats: FLAIR</Typography>
                                 <Typography variant="body2" color="text.secondary" align="justify">
-                                    Wildcats: FLAIR is a web application that allows students from CIT-University to fill up COVID Health Declaration Form online
+                                    Wildcats: FLAIR is a web application that allows students from CIT-University to fill up COVID Health Declaration Form online.
+                                </Typography>
+                            </CardContent>
+                            <CardActions>
+                                <a className="Links" href="https://github.com/clarknovachrono/Flair_Midterm" target="_blank">
+                                    <Button size="small" sx={{ marginTop: -1, p: 2 }}>View</Button>
+                                </a>
+                            </CardActions>
+                        </Card>
+                        <Card sx={{ maxWidth: 345, m: 5 }}>
+                            <CardMedia  component="img" width="140" image="/images/facerecog app.jpg" />
+                            <CardContent>
+                                <Typography gutterBottom variant="h5" component="div">face_recog.py</Typography>
+                                <Typography variant="body2" color="text.secondary" align="justify">
+                                    Wildcats: FLAIR's external application made using pre-trained face recognition library- OpenFace and dlib with the help of SVM classifier as machine learning classification algorithm.
                                 </Typography>
                             </CardContent>
                             <CardActions>
@@ -56,6 +70,7 @@ export default function Works() {
                                 </a>
                             </CardActions>
                         </Card>
+                        
                     </Grid>
                 </Grid>
             </Box>
