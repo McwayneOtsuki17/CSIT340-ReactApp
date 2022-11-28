@@ -2,10 +2,10 @@ import React from 'react';
 import './App.css';
 // For react-router-dom v6 above, Switch is changed to Routes, and Redirect is changed to Navigate
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./components/Home";
-import Works from "./components/Works";
-import Contact from "./components/Contact";
-import ColorSequence from "./components/ColorSequence";
+import Home from "./pages/Home";
+import Works from "./pages/Works";
+import Contact from "./pages/Contact";
+import ColorSequence from "./pages/ColorSequence
 
 export default function App() {
   return (
