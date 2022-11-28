@@ -26,7 +26,7 @@ export default function Home() {
                 </Toolbar>
             </AppBar>
 
-            <h1>Welcome!</h1>
+            <Typography variant="h1">Welcome!</Typography>
             <br />
         </React.Fragment>
     );

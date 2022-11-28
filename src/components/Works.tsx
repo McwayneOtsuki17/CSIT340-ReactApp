@@ -36,7 +36,7 @@ export default function Works() {
                             <CardMedia
                                 component="img"
                                 height="140"
-                                image="/images/badge.png"
+                                image="/images/ColorSequence.jpg"
                                 alt="tennocon"
                             />
                             <CardContent>
@@ -59,18 +59,19 @@ export default function Works() {
                             <CardMedia
                                 component="img"
                                 height="140"
-                                image="/images/badge.png"
+                                image="/images/Death.jpg"
                                 alt="tennocon"
                             />
                             <CardContent>
-                                <Typography gutterBottom variant="h5" component="div">Color Sequence</Typography>
+                                <Typography gutterBottom variant="h5" component="div">Realistic Death</Typography>
                                 <Typography variant="body2" color="text.secondary" align="left">
-                                    A Color Sequence mini-game using React JavaScript TypeScript where the player needs to find and guess the sequence of 9 different colors. The colors are always randomized on page load, when refreshed, or when the player completes the succession.
+                                    A realistic portrait of Death, a character from the Cartoon Network original show known as Adventure Time.
                                 </Typography>
                             </CardContent>
                             <CardActions>
-                                <Button size="small">Play</Button>
-                                <Button size="small">Learn More</Button>
+                                <Link className="Links" to="/">
+                                <Button size="small">View</Button>
+                                </Link>
                             </CardActions>
                         </Card>
                     </Grid>
