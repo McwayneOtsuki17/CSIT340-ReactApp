@@ -1,14 +1,26 @@
 import React from "react";
 import './Styles.css';
 import { Link } from "react-router-dom";
-import { AppBar, Button, ButtonGroup, Toolbar, Typography } from '@mui/material';
+import { AppBar, Button, ButtonGroup, Toolbar, Typography, styled} from '@mui/material';
 
 export default function Home() {
+    const appbarStyle = {
+        alignItems: "center",
+        justifyContent: "center" ,
+    }
+
+    const StyledButtonGroup = styled(ButtonGroup)({
+        '& .MuiButtonGroup-grouped': {
+          color: "#FFFFFF",
+          margin: 5,
+        }
+    });
+
     return (
         <React.Fragment>
-            <AppBar position="fixed" sx={{ alignItems: "center", justifyContent: "center" }}>
+            <AppBar position="fixed" sx={appbarStyle}>
                 <Toolbar>
-                    <ButtonGroup className="MenuButtons" variant="contained" aria-label="Menu" disableElevation>
+                    <StyledButtonGroup className="MenuButtons" variant="text" disableElevation>
                         <Link className="Links" to="/">
                             <Button>Home</Button>
                         </Link>
@@ -20,7 +32,7 @@ export default function Home() {
                         <Link className="Links" to="/contact">
                             <Button>Contact</Button>
                         </Link>
-                    </ButtonGroup>
+                    </StyledButtonGroup>
                 </Toolbar>
             </AppBar>
             
