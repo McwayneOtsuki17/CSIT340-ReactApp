@@ -29,8 +29,8 @@ export default function Works() {
             </AppBar>
 
             <Box sx={{ alignItems: 'center', justifyContent: 'center' }}>
+            
                 <Grid rowSpacing={2} columnSpacing={{ xs: 5, sm: 5, md: 5 }} container >
-
                     <Grid item container >
                         <Card sx={{ maxWidth: 345, m: 5 }}>
                             <CardMedia
@@ -51,29 +51,10 @@ export default function Works() {
                                         <PlayArrowIcon sx={{ height: 38, width: 38 , color: "#2C2C2C"}} />            
                                     </Link>
                                 </IconButton>
-                                <Typography sx={{marginTop: -1, p: 2}}>Play</Typography>
+                                <Button size="small" sx={{marginTop: -1, p: 2}}>Play</Button>
                             </CardActions>
                         </Card>
 
-                        <Card sx={{ maxWidth: 345, m: 5 }}>
-                            <CardMedia
-                                component="img"
-                                height="140"
-                                image="/images/Death.jpg"
-                                alt="tennocon"
-                            />
-                            <CardContent>
-                                <Typography gutterBottom variant="h5" component="div">Realistic Death</Typography>
-                                <Typography variant="body2" color="text.secondary" align="left">
-                                    A realistic portrait of Death, a character from the Cartoon Network original show known as Adventure Time.
-                                </Typography>
-                            </CardContent>
-                            <CardActions>
-                                <Link className="Links" to="/">
-                                <Button size="small">View</Button>
-                                </Link>
-                            </CardActions>
-                        </Card>
                     </Grid>
                 </Grid>
             </Box>
