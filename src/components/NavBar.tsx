@@ -1,29 +1,33 @@
 import React from "react";
 import '../pages/Styles.css';
-import { Link } from "react-router-dom";
+import { Link, NavLink} from "react-router-dom";
 import { AppBar, Button, ButtonGroup, CardMedia, Toolbar, styled } from '@mui/material';
 
 export default function NavBar() {
     const appbarStyle = {
-        backgroundColor: '#FFFFFF',
+        backgroundColor: 'rgba(255, 255, 255, 0.0)',
         marginLeft: 3,
         marginRight: 3,
         marginBottom: 10,
-        paddingTop: 5.5,
+        marginTop: 4.5,
     }
 
     const StyledButtonGroup = styled(ButtonGroup)({
         '& .MuiButtonGroup-grouped': {
             color: "#2C2C2C",
-            margin: 5,
+            margin: 10,
+            borderRadius: 100,
+            width: 85,
+            height: 85,
         }, '& .MuiButtonGroup-grouped:hover': {
-            backgroundColor: '#FFFFFF',
+            backgroundColor: '#1BB6F7',
+            color: "#FFFFFF",
         },
     });
 
     const logo = {
         marginLeft: 9,
-        marginTop: 1,
+        marginTop: 3,
         position: 'fixed',
         width: 120,
     }
@@ -31,23 +35,29 @@ export default function NavBar() {
     return (
         <React.Fragment>
 
-            <AppBar position="absolute" sx={appbarStyle} elevation={0}>
+            <AppBar position="fixed" sx={appbarStyle} elevation={0}>
                 <Link className="Links" to="/">
                     <CardMedia sx={logo} component="img" image="/images/OCCO.png" />
                 </Link>
                 <Toolbar sx={{ flexDirection: 'row-reverse', }}>
                     <StyledButtonGroup className="MenuButtons" variant="text" disableElevation>
+                        <NavLink to="/" className={({ isActive }) => (isActive ? "link-active" : "link")}>
                         <Link className="Links" to="/">
                             <Button>Home</Button>
                         </Link>
+                        </NavLink>
 
+                        <NavLink to="/works" className={({ isActive }) => (isActive ? "link-active" : "link")}>
                         <Link className="Links" to="/works">
-                            <Button>Our Works</Button>
+                            <Button>Works</Button>
                         </Link>
+                        </NavLink>
 
+                        <NavLink to="/contact" className={({ isActive }) => (isActive ? "link-active" : "link")}>
                         <Link className="Links" to="/contact">
                             <Button>Contact</Button>
                         </Link>
+                        </NavLink>
                     </StyledButtonGroup>
                 </Toolbar>
             </AppBar>

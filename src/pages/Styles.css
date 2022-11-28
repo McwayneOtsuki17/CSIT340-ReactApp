@@ -1,3 +1,16 @@
+.link {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+  /* Specific styles for active links */
+.link-active {
+    color: #FFFFFF;
+    background: #1BB6F7;
+    padding: 20;
+    border-radius: 100px;
+    text-decoration: none;
+}
+
 .Links {
     color: #FFFFFF;
     text-decoration: none;
@@ -7,5 +20,5 @@
  }
 
  .MenuButtons {
-    font-size: 20;
+    font-size: 18;
  }

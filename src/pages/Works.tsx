@@ -10,7 +10,7 @@ export default function Works() {
             <NavBar></NavBar>
 
             {/* Content starts here */}
-            <Box sx={{marginTop: 10}}>
+            <Box sx={{marginTop: 20}}>
             <Typography variant="h1">Our Works</Typography>
                 <Grid rowSpacing={2} columnSpacing={{ xs: 5, sm: 5, md: 5 }} container >
 
