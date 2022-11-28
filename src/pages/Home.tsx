@@ -38,6 +38,7 @@ export default function Home() {
             
             {/* Content starts here */}
             <Typography variant="h1">Welcome!</Typography>
+            
             <br />
         </React.Fragment>
     );
