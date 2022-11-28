@@ -9,8 +9,6 @@ export default function Works() {
     return (
         <React.Fragment>
             <AppBar position="fixed" sx={{ alignItems: "center", justifyContent: "center" }}>
-                <Toolbar><Typography variant="h6">大月</Typography></Toolbar>
-                <hr style={{ width: "60%", alignItems: "center", marginBottom: -10, marginTop: -12 }}></hr>
                 <Toolbar>
                     <ButtonGroup className="MenuButtons" variant="contained" aria-label="Menu" disableElevation>
                         <Link className="Links" to="/">
@@ -28,8 +26,9 @@ export default function Works() {
                 </Toolbar>
             </AppBar>
 
+            {/* Content starts here */}
             <Box sx={{ alignItems: 'center', justifyContent: 'center' }}>
-            
+
                 <Grid rowSpacing={2} columnSpacing={{ xs: 5, sm: 5, md: 5 }} container >
                     <Grid item container >
                         <Card sx={{ maxWidth: 345, m: 5 }}>
@@ -48,10 +47,10 @@ export default function Works() {
                             <CardActions>
                                 <IconButton aria-label="play/pause">
                                     <Link className="Links" to="/colorsequence">
-                                        <PlayArrowIcon sx={{ height: 38, width: 38 , color: "#2C2C2C"}} />            
+                                        <PlayArrowIcon sx={{ height: 38, width: 38, color: "#2C2C2C" }} />
                                     </Link>
                                 </IconButton>
-                                <Button size="small" sx={{marginTop: -1, p: 2}}>Play</Button>
+                                <Button size="small" sx={{ marginTop: -1, p: 2 }}>Play</Button>
                             </CardActions>
                         </Card>
 

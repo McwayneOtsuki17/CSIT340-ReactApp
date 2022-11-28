@@ -6,11 +6,9 @@ import { AppBar, Button, ButtonGroup, Toolbar, Typography } from '@mui/material'
 export default function Contact() {
     return (
         <React.Fragment>
-            <AppBar position="fixed" sx={{alignItems:"center", justifyContent:"center"}}>
-                <Toolbar><Typography variant="h6">大月</Typography></Toolbar>
-                <hr style={{width: "60%", alignItems:"center", marginBottom: -10, marginTop: -12}}></hr>
+            <AppBar position="fixed" sx={{ alignItems: "center", justifyContent: "center" }}>
                 <Toolbar>
-                    <ButtonGroup className="MenuButtons" variant="contained" aria-label="Menu"  disableElevation>
+                    <ButtonGroup className="MenuButtons" variant="contained" aria-label="Menu" disableElevation>
                         <Link className="Links" to="/">
                             <Button>Home</Button>
                         </Link>
@@ -25,7 +23,8 @@ export default function Contact() {
                     </ButtonGroup>
                 </Toolbar>
             </AppBar>
-
+            
+            {/* Content starts here */}
             <h1>Contact Information</h1>
             <br />
         </React.Fragment>
