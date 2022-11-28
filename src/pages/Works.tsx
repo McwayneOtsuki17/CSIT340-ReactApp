@@ -42,6 +42,20 @@ export default function Works() {
                                 </a>
                             </CardActions>
                         </Card>
+                        <Card sx={{ maxWidth: 345, m: 5 }}>
+                            <CardMedia  component="img" width="140" image="/images/wildcats flair logo.png" />
+                            <CardContent>
+                                <Typography gutterBottom variant="h5" component="div">Wildcats: FLAIR</Typography>
+                                <Typography variant="body2" color="text.secondary" align="justify">
+                                    Wildcats: FLAIR is a web application that allows students from CIT-University to fill up COVID Health Declaration Form online
+                                </Typography>
+                            </CardContent>
+                            <CardActions>
+                                <a className="Links" href="https://github.com/McwayneOtsuki17/Vorbestellan" target="_blank">
+                                    <Button size="small" sx={{ marginTop: -1, p: 2 }}>View</Button>
+                                </a>
+                            </CardActions>
+                        </Card>
                     </Grid>
                 </Grid>
             </Box>
