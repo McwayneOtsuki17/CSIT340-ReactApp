@@ -6,14 +6,15 @@ import NavBar from "../components/NavBar";
 export default function Works() {
     return (
         <React.Fragment>
-            <NavBar/>
+            <NavBar />
 
             {/* Content starts here */}
-            <Box sx={{marginTop: 20}}>
-            <Typography variant="h1">Our Works</Typography>
+            <Box sx={{ marginTop: 20 }}>
+                <Typography variant="h1">Our Works</Typography>
                 <Grid rowSpacing={2} columnSpacing={{ xs: 5, sm: 5, md: 5 }} container >
 
                     <Grid item container >
+                        
                         <Card sx={{ maxWidth: 345, m: 5 }} elevation={1}>
                             <CardMedia component="img" width="140" image="/images/medsight.png" />
                             <CardContent>
@@ -28,8 +29,9 @@ export default function Works() {
                                 </a>
                             </CardActions>
                         </Card>
+
                         <Card sx={{ maxWidth: 345, m: 5 }}>
-                            <CardMedia  component="img" width="140" image="/images/vorbestellan.png" />
+                            <CardMedia component="img" width="140" image="/images/vorbestellan.png" />
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">Vorbestellan</Typography>
                                 <Typography variant="body2" color="text.secondary" align="justify">
@@ -42,8 +44,9 @@ export default function Works() {
                                 </a>
                             </CardActions>
                         </Card>
+
                         <Card sx={{ maxWidth: 345, m: 5 }}>
-                            <CardMedia  component="img" width="140" image="/images/wildcats flair logo.png" />
+                            <CardMedia component="img" width="140" image="/images/wildcats flair logo.png" />
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">Wildcats: FLAIR</Typography>
                                 <Typography variant="body2" color="text.secondary" align="justify">
@@ -56,8 +59,12 @@ export default function Works() {
                                 </a>
                             </CardActions>
                         </Card>
+                    </Grid>
+
+                    <Grid item container >
+
                         <Card sx={{ maxWidth: 345, m: 5 }}>
-                            <CardMedia  component="img" width="140" image="/images/facerecog app.jpg" />
+                            <CardMedia component="img" width="140" image="/images/facerecog app.jpg" />
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">face_recog.py</Typography>
                                 <Typography variant="body2" color="text.secondary" align="justify">
@@ -70,8 +77,9 @@ export default function Works() {
                                 </a>
                             </CardActions>
                         </Card>
-                        
+
                     </Grid>
+
                 </Grid>
             </Box>
 
