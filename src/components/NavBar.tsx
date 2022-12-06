@@ -8,7 +8,7 @@ export default function NavBar() {
     const appbarStyle = {
         backgroundColor: 'rgba(255, 255, 255, 1.0)',
         marginLeft: 3,
-        marginRight: 3,
+        paddingRight: 3,
         marginBottom: 10,
         paddingTop: 4.5,
     }
