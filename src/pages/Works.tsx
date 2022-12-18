@@ -1,6 +1,9 @@
 import React from "react";
 import { Box, Button, Card, CardActions, CardContent, CardMedia, Grid, Typography } from '@mui/material';
 import './Works';
+import Create from'./Create';
+import Read from'./Read';
+import Update from'./Update';
 import NavBar from "../components/NavBar";
 
 export default function Works() {
@@ -11,6 +14,12 @@ export default function Works() {
             {/* Content starts here */}
             <Box sx={{ marginTop: 20 }}>
                 <Typography variant="h1">Our Works</Typography>
+                
+                {/* CRUD Part para mag add ta og projects nalang */}
+                <Create/>
+                <Read/>
+                <Update/>
+
                 <Grid rowSpacing={2} columnSpacing={{ xs: 5, sm: 5, md: 5 }} container >
 
                     <Grid item container >
