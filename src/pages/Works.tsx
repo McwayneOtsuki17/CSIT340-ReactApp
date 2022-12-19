@@ -17,11 +17,10 @@ export default function Works() {
                 
                 {/* CRUD Part para mag add ta og projects nalang */}
                 <Create/>
-                <Read/>
-                <Update/>
+                
 
                 <Grid rowSpacing={2} columnSpacing={{ xs: 5, sm: 5, md: 5 }} container >
-
+                    <Read/>
                     <Grid item container >
                         
                         <Card sx={{ maxWidth: 345, m: 5 }} elevation={1}>

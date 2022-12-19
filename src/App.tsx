@@ -18,7 +18,6 @@ export default function App() {
           <Route path="/" element={<Home/>} /> {/* Default Path */}
           <Route path="/works" element={<Works/>} />
           <Route path="/contact" element={<Contact/>} />
-          <Route path="/read" element={<Read/>} />
           <Route path="/update" element={<Update/>} />
           {/* <Route path="/colorsequence" element={<ColorSequence/>} /> */}
         </Routes>
