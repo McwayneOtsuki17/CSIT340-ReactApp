@@ -16,7 +16,7 @@ export default function Contact() {
 
                         <Card sx={{ width: 345, m: 5 }} elevation={1}>
                             <CardContent>
-                                <Avatar alt="Otsuki" src="/images/medsight.png" sx={{ width: 100, height: 100, marginRight: "auto", marginLeft: "auto" }} />
+                                <Avatar alt="Otsuki" src="/images/Otsuki_profile.jpg" sx={{ width: 100, height: 100, marginRight: "auto", marginLeft: "auto" }} />
                                 <Typography gutterBottom variant="h5" component="div">McWayne Otsuki</Typography>
                                 <Typography variant="body2" color="text.secondary" align="center">
                                     BSIT-IV
@@ -31,7 +31,7 @@ export default function Contact() {
 
                         <Card sx={{ width: 345, m: 5 }}>                  
                             <CardContent>
-                                <Avatar alt="Casia" src="/images/medsight.png" sx={{ width: 100, height: 100, marginRight: "auto", marginLeft: "auto"  }} />
+                                <Avatar alt="Casia" src="/images/Casia_profile.png" sx={{ width: 100, height: 100, marginRight: "auto", marginLeft: "auto"  }} />
                                 <Typography gutterBottom variant="h5" component="div">Franz Angelo Casia</Typography>
                                 <Typography variant="body2" color="text.secondary" align="center">
                                     BSIT-IV
