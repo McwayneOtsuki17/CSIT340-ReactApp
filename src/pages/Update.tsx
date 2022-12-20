@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Button, Checkbox, Form } from 'semantic-ui-react'
+import { Button, TextField } from '@mui/material';
+import { Checkbox, Form } from 'semantic-ui-react'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import NavBar from "../components/NavBar";
 
 export default function Update() {
     let navigate = useNavigate();
@@ -36,26 +38,25 @@ export default function Update() {
         })
     }
     return (
-        <div>
-            <Form className="create-form">
-                <Form.Field>
-                    <label>Title</label>
-                    <input placeholder='Title' value={title} onChange={(e) => setTitle(e.target.value)} />
-                </Form.Field>
-                <Form.Field>
-                    <label>Description</label>
-                    <input placeholder='Description' value={description} onChange={(e) => setDescription(e.target.value)} />
-                </Form.Field>
-                <Form.Field>
-                    <label>Link</label>
-                    <input placeholder='URL' value={link} onChange={(e) => setLink(e.target.value)} required/>
-                </Form.Field>
-                <Form.Field>
-                    <label>Image</label>
-                    <input type="file" onChange={handleChange} /> <br />
-                </Form.Field>
-                <Button type='submit' onClick={updateAPIData}>Update</Button>
-            </Form>
-        </div>
+        <>
+            <NavBar />
+            <div>
+                <Form style={{ margin: 2, bgcolor: '#ddd' }}>
+                    <Form.Field>
+                        <TextField autoComplete='off' value={title} onChange={(e) => setTitle(e.target.value)} sx={{ m: 1 }} />
+                    </Form.Field>
+                    <Form.Field>
+                        <TextField autoComplete='off' placeholder='Description' value={description} onChange={(e) => setDescription(e.target.value)} sx={{ m: 1 }} />
+                    </Form.Field>
+                    <Form.Field>
+                        <TextField autoComplete='off' placeholder='URL' value={link} onChange={(e) => setLink(e.target.value)} sx={{ m: 1 }} />
+                    </Form.Field>
+                    <Form.Field>
+                        <input type="file" onChange={handleChange} /> <br />
+                    </Form.Field>
+                    <Button variant="contained" color="success" type='submit' onClick={updateAPIData} sx={{ m: 1 }}>Save</Button>
+                </Form>
+            </div>
+        </>
     )
 }

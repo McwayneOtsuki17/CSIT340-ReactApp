@@ -11,6 +11,7 @@ export default function Read() {
         title: string;
         description: string;
         link: string;
+        image: string;
     }
 
     const [APIData, setAPIData] = useState<APIData[]>([]);
@@ -24,11 +25,12 @@ export default function Read() {
     }, []);
 
     const setData = (data: any) => {
-        let { id, title, description, link } = data;
+        let { id, title, description, link, image } = data;
         localStorage.setItem('ID', id);
         localStorage.setItem('Title', title);
         localStorage.setItem('Description', description);
         localStorage.setItem('Link', link);
+        localStorage.setItem('Image', image);
         navigate('/update');
     }
 
@@ -53,20 +55,16 @@ export default function Read() {
                 return (
                     
                         <Card sx={{ maxWidth: 345, m: 5 }}>
-                            {/* <CardMedia component="img" width="140" image={data.image} /> */}
+                            <CardMedia component="img" width="140" image={data.image} />
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">{data.title}</Typography>
                                 <Typography variant="body2" color="text.secondary" align="justify">{data.description}</Typography>
                             </CardContent>
                             <CardActions>
                                 <a className="Links" href={data.link} target="_blank" rel="noopener noreferrer">
-                                    <Button size="small" sx={{ marginTop: -1, p: 2 }}>View</Button>
+                                    <Button size="small">View</Button>
                                 </a>
-                            </CardActions>
-                            <CardActions>
                                 <Button onClick={() => setData(data)}>Update</Button>
-                            </CardActions>
-                            <CardActions>
                                 <Button onClick={() => onDelete(data.id)}>Delete</Button>
                             </CardActions>
                         </Card>

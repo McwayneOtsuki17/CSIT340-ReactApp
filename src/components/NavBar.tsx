@@ -11,6 +11,7 @@ export default function NavBar() {
         paddingRight: 3,
         marginBottom: 10,
         paddingTop: 4.5,
+        paddingBottom: 2,
     }
 
     const StyledButtonGroup = styled(ButtonGroup)({
