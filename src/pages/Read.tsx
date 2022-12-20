@@ -1,13 +1,15 @@
 import axios from 'axios';
+import { Button, Card, CardActions, CardContent, CardMedia, Grid, Typography } from '@mui/material';
+import './Works';
 import React, { useEffect, useState } from 'react';
-import { Table, Button } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
 export default function Read() {
     interface APIData {
         id: string;
-        firstName: string;
-        lastName: string;
+        title: string;
+        description: string;
+        link: string;
     }
 
     const [APIData, setAPIData] = useState<APIData[]>([]);
@@ -21,10 +23,11 @@ export default function Read() {
     }, []);
 
     const setData = (data: any) => {
-        let { id, firstName, lastName } = data;
+        let { id, title, description, link } = data;
         localStorage.setItem('ID', id);
-        localStorage.setItem('First Name', firstName);
-        localStorage.setItem('Last Name', lastName);
+        localStorage.setItem('Title', title);
+        localStorage.setItem('Description', description);
+        localStorage.setItem('Link', link);
     }
 
     const getData = () => {
@@ -42,36 +45,33 @@ export default function Read() {
     }
 
     return (
-        <div>
-            <Table singleLine>
-                <Table.Header>
-                    <Table.Row>
-                        <Table.HeaderCell>First Name</Table.HeaderCell>
-                        <Table.HeaderCell>Last Name</Table.HeaderCell>
-                        <Table.HeaderCell>Update</Table.HeaderCell>
-                        <Table.HeaderCell>Delete</Table.HeaderCell>
-                    </Table.Row>
-                </Table.Header>
-
-                <Table.Body>
-                    {APIData.map((data) => {
-                        return (
-                            <Table.Row>
-                                <Table.Cell>{data.firstName}</Table.Cell>
-                                <Table.Cell>{data.lastName}</Table.Cell>
-                                <Link to='/update'>
-                                    <Table.Cell>
-                                        <Button onClick={() => setData(data)}>Update</Button>
-                                    </Table.Cell>
-                                </Link>
-                                <Table.Cell>
-                                    <Button onClick={() => onDelete(data.id)}>Delete</Button>
-                                </Table.Cell>
-                            </Table.Row>
-                        )
-                    })}
-                </Table.Body>
-            </Table>
-        </div>
+        <>
+        <Grid item container >
+            {APIData.map((data) => {
+                return (
+                    
+                        <Card sx={{ maxWidth: 345, m: 5 }}>
+                            {/* <CardMedia component="img" width="140" image={data.image} /> */}
+                            <CardContent>
+                                <Typography gutterBottom variant="h5" component="div">{data.title}</Typography>
+                                <Typography variant="body2" color="text.secondary" align="justify">{data.description}</Typography>
+                            </CardContent>
+                            <CardActions>
+                                <a className="Links" href={data.link} target="_blank">
+                                    <Button size="small" sx={{ marginTop: -1, p: 2 }}>View</Button>
+                                </a>
+                            </CardActions>
+                            <CardActions>
+                                <Button onClick={() => setData(data)}>Update</Button>
+                            </CardActions>
+                            <CardActions>
+                                <Button onClick={() => onDelete(data.id)}>Delete</Button>
+                            </CardActions>
+                        </Card>
+                    
+                )
+            })}
+            </Grid>
+        </>
     )
 }
