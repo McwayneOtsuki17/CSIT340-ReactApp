@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Button } from '@mui/material';
 import { Form } from 'semantic-ui-react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
 
 export default function Create() {
     const [title, setTitle] = useState('');

@@ -2,9 +2,10 @@ import axios from 'axios';
 import { Button, Card, CardActions, CardContent, CardMedia, Grid, Typography } from '@mui/material';
 import './Works';
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function Read() {
+    const navigate = useNavigate();
     interface APIData {
         id: string;
         title: string;
@@ -28,6 +29,7 @@ export default function Read() {
         localStorage.setItem('Title', title);
         localStorage.setItem('Description', description);
         localStorage.setItem('Link', link);
+        navigate('/update');
     }
 
     const getData = () => {
@@ -57,7 +59,7 @@ export default function Read() {
                                 <Typography variant="body2" color="text.secondary" align="justify">{data.description}</Typography>
                             </CardContent>
                             <CardActions>
-                                <a className="Links" href={data.link} target="_blank">
+                                <a className="Links" href={data.link} target="_blank" rel="noopener noreferrer">
                                     <Button size="small" sx={{ marginTop: -1, p: 2 }}>View</Button>
                                 </a>
                             </CardActions>
